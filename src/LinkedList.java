@@ -1,3 +1,5 @@
+//import jdk.internal.util.xml.impl.Input;
+
 import java . util .*;
 
 class Node{
@@ -23,6 +25,12 @@ public class LinkedList {
             curr.next = temp;
             curr = curr.next;
         }
+        //deletion
+        Node prev = new Node(rand.nextInt(10));
+        prev.next = curr.next;
+        head = head.next;
+        curr.next = null;
+        curr = null;
 
         //print
         curr = head;
